@@ -35,12 +35,16 @@
     <div class="navbar-wrapper" style="display:none">
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
+          <!-- IBM Watson Logo -->
           <div class="navbar-header">
             <a class="navbar-brand no-underline" href="https://www.ibm.com/watson/developer/"><span
                 class="thin-branding">IBM</span> Watson APIs</a>
           </div>
+          <!-- .navbar right-->
         </div>
+        <!-- .container -->
       </div>
+      <!-- .navbar -->
     </div>
     <div class="header" style="display:none">
       <div class="container">
@@ -48,6 +52,18 @@
           <img src="images/language-translator.svg" class="service-icon">
         </div>
         <div class="col-lg-10 col-md-10 col-sm-12">
+          <h1>Language Translator</h1>
+          <p>The IBM Watson Language Translator service allows you to input text or documents in one language and see
+            the output in another.
+            Translation is available for over 70 languages: Afrikaans, Albanian, Arabic, Armenian, Azerbaijani, Bashkir,
+            Basque, Belarusian, Bengali, Bosnian, Bulgarian, Catalan, Central Khmer, Chinese (Simplified), Chinese
+            (Traditional), Chuvash, Croatian, Czech, Danish, Dutch, English, Esperanto, Estonian, Finnish, French,
+            Georgian, German, Greek, Gujarati, Haitian, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Irish, Italian,
+            Japanese, Kazakh, Kirghiz, Korean, Kurdish, Latvian, Lithuanian, Malay, Malayalam, Maltese, Mongolian,
+            Norwegian Bokmal, Norwegian Nynorsk, Panjabi, Persian, Polish, Portuguese, Pushto, Romanian, Russian,
+            Serbian, Slovakian, Slovenian, Somali, Spanish, Swedish, Tamil, Telugu Thai, Turkish, Ukrainian, Urdu, and
+            Vietnamese.
+          </p>
           <p><img src="images/link.svg" class="glyph"><strong>Resources:</strong></br>
           <div class="resources">
             <a href="https://cloud.ibm.com/apidocs/language-translator">API Overview</a>
@@ -58,9 +74,12 @@
               href="https:/cloud.ibm.com/registration/?target=%2Fcatalog%2Fservices%2Flanguage-translator%3FhideTours%3Dtrue%26cm_mmc%3D-_-Watson%2BCore_Watson%2BCore%2B-%2BPlatform-_-WW_WW-_-wdc-ref%26cm_mmc%3D-_-Watson%2BCore_Watson%2BCore%2B-%2BPlatform-_-WW_WW-_-wdc-ref%26cm_mmca1%3D000000OF%26cm_mmca2%3D10000409">Start
               for free in IBM Cloud</a>
           </div>
+          <!-- .resources -->
           </p>
         </div>
+        <!-- .col-lg-10 -->
       </div>
+      <!-- .container -->
     </div>
     <% } %>
       <div class="container">
@@ -68,6 +87,7 @@
           <div class="col-lg-12" style="display:none">
             <h2>Choose a Domain</h2>
           </div>
+          <!-- .col-lg-12 -->
           <div class="col-lg-8 col-md-12 col-sm-12" style="display:none">
             <p class="help-block">Just like a doctor is skilled in medical terms, domain-specific models have been
               trained
@@ -79,7 +99,9 @@
               <input type="radio" name="group1" value="general" checked="checked">News
               <input type="radio" name="group1" value="patent">Patent
             </div>
+            <!-- .form-group -->
           </div>
+          <!-- .col-lg-8 -->
           <div class="col-lg-12 col-md-12 col-sm-12" style="display:none">
             <div>
               <h6><strong>Would you like to help make this service better?</strong><br><br>
@@ -106,51 +128,15 @@
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <h1 style=text-align:center>Proyecto final de Topicos especiales - Grupo #12</h1>
-            <h3 style=text-align:center;>Introduza en la sección "Texto de entrada" el texto que desea traducir. A continuación, en el campo a la derecha, se mostrará el texto traducido, por último selecccione la voz que desea utilizar y dele click a sintetizar texto a voz</h3>
+            <h3 style=text-align:center;>Introduza en la sección "Texto de entrada" el texto que desea traducir. A
+              continuación, en el campo a la derecha, se mostrará el texto traducido, por último selecccione la voz que
+              desea utilizar y dele click a sintetizar texto a voz</h3>
           </div>
-          <div class="container">
-            <div class="row mb-3">
-              <div class="col-md-8 themed-grid-col">
-                <form id="formTextToSpeech">
-                  <div class="form-group">
-                    <label for="formLabelVoces">Seleccione el tipo de voz</label>
-                    <select style="border-radius: 50px; border-color:#2d6dc8" , class="form-control"
-                      id="formSelectVoces" name="voice"></select>
-                  </div>
-                  <input id="formHiddenAccept" name="accept" type="hidden" value="audio/mp3">
-                  <div class="form-group">
-                    <label style="display:none" for="formLabelTexto">Texto a Convertir</label>
-                    <fieldset>
-                      <div style="display:none" class="form-group row">
-                        <div class="col-lg-12">
-                          <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="home2">
-                              <textarea class="form-control" id="formTextareaTexto" name="text" rows="3"></textarea>
-                            </div>
-                            <div style="display:none" role="tabpanel" class="tab-pane" id="profile2">
-                              <textarea disabled="disabled">Example of JSON</textarea>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="form-group ">
-                    
-                  </div>
-                </form>
-              </div>
-              <div class="col-md-4 themed-grid-col">
-                <div class="media">
-                  <audio controls id="playerTextVoz" type="audio/mpeg">
-                  </audio>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div class="col-lg-6 col-md-6 col-sm-6">
             <h3>Texto de entrada</h3>
             <div class="form-group row">
@@ -213,15 +199,55 @@
               </form>
             </div>
           </div>
-          <div class="form-group row">
-          </div>
-          <div style="align-self: center;" class="col-sm-10">
-            <button
-              style="border-color:#2d6dc8; color: #2d6dc8; border-radius: 50px; background-color: #FFFFFF;"
-              type="submit" class="btn btn-primary">Sintetizar texto a Voz</button>
-          </div>
+
+
           <div id="resetSpan">
-            <img style="color:#2d6dc8; align-items: center; font-weight: 1000; padding-bottom: 25px;" class="icon"><a href="/">Restablecer</a>
+            <img style="color:#2d6dc8; align-items: center; font-weight: 1000; padding-bottom: 25px;" class="icon"><a
+              href="/">Restablecer</a>
+          </div>
+          <div class="container">
+            <div class="row mb-3">
+              <div class="col-md-8 themed-grid-col">
+                <form id="formTextToSpeech">
+                  <div class="form-group">
+                    <label for="formLabelVoces">Seleccione el tipo de voz</label>
+                    <select style="border-radius: 50px; border-color:#2d6dc8" , class="form-control"
+                      id="formSelectVoces" name="voice"></select>
+                  </div>
+                  <input id="formHiddenAccept" name="accept" type="hidden" value="audio/mp3">
+                  <div class="form-group">
+                    <label style="display:none" for="formLabelTexto">Texto a Convertir</label>
+                    <fieldset>
+                      <div style="display:none" class="form-group row">
+                        <div class="col-lg-12">
+                          <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home2">
+                              <textarea class="form-control" id="formTextareaTexto" name="text" rows="3"></textarea>
+                            </div>
+                            <div style="display:none" role="tabpanel" class="tab-pane" id="profile2">
+                              <textarea disabled="disabled">Example of JSON</textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <div style="align-self: center;" class="col-sm-10">
+                      <button
+                        style="border-color:#2d6dc8; color: #2d6dc8; border-radius: 50px; background-color: #FFFFFF;"
+                        type="submit" class="btn btn-primary">Sintetizar texto a Voz</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-4 themed-grid-col">
+                <div class="media">
+                  <audio controls id="playerTextVoz" type="audio/mpeg">
+                  </audio>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -289,6 +315,8 @@
       <!-- Scripts Areas -->
       <script>
         (function () {
+          // Obtener todas las voces que estan disponibles en el servicio.
+          // luego las muestra todas y seleciona la voz de enrique por defecto.
           $.getJSON("/api/voces")
             .done(function (data) {
               $.each(data.voices, function (i, voice) {
@@ -296,6 +324,8 @@
                 $("#formSelectVoces").append($(optionHtml).val(voice.name).html(voice.description))
               });
             });
+
+          // Enviar el formulario.
           $("#formTextToSpeech").on("submit", function (e) {
             e.preventDefault();
             var formData = $(this).serialize();
