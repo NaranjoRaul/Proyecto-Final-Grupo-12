@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <title>Proyecto Semestral</title>
+  <meta name="og:title" content="IBM Watson Language Translator">
+  <meta name="og:description" content="The IBM Watson Language Translator service converts text input in one language into a destination language for the end user using background from domain-specific models. Translation is available among Afrikaans, Albanian, Arabic, Armenian, Azerbaijani, Bashkir, Basque, Belarusian, Bengali, Bosnian, Bulgarian, Catalan, Central Khmer, Chinese (Simplified), Chinese (Traditional), Chuvash, Croatian, Czech, Danish, Dutch, English, Esperanto, Estonian, Finnish, French, Georgian, German, Greek, Gujarati, Haitian, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Irish, Italian, Japanese, Kazakh, Kirghiz, Korean, Kurdish, Latvian, Lithuanian, Malay, Malayalam, Maltese, Mongolian, Norwegian Bokmal, Norwegian Nynorsk, Panjabi, Persian, Polish, Portuguese, Pushto, Romanian, Russian, Serbian, Slovakian, Slovenian, Somali, Spanish, Swedish, Tamil, Telugu Thai, Turkish, Ukrainian, Urdu, and Vietnamese
+ (some languages may not be available for all domains).">
+  <link href="css/watson-bootstrap-style.css" rel="stylesheet">
+  <link href="css/browser-compatibility.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #565862; color:#2d6dc8; font-family: 'Roboto', sans-serif;" ;>
+  <% if (!hideHeader) { %>
+    <div class="navbar-wrapper" style="display:none">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand no-underline" href="https://www.ibm.com/watson/developer/"><span
+                class="thin-branding">IBM</span> Watson APIs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header" style="display:none">
+      <div class="container">
+        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+          <img src="images/language-translator.svg" class="service-icon">
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-12">
+          <p><img src="images/link.svg" class="glyph"><strong>Resources:</strong></br>
+          <div class="resources">
+            <a href="https://cloud.ibm.com/apidocs/language-translator">API Overview</a>
+            <a
+              href="https://cloud.ibm.com/docs/language-translator?topic=language-translator-gettingstarted">Documentation</a>
+            <a href="https://github.com/watson-developer-cloud/language-translator-nodejs">Fork on Github</a>
+            <a class="base--button base--button_fill"
+              href="https:/cloud.ibm.com/registration/?target=%2Fcatalog%2Fservices%2Flanguage-translator%3FhideTours%3Dtrue%26cm_mmc%3D-_-Watson%2BCore_Watson%2BCore%2B-%2BPlatform-_-WW_WW-_-wdc-ref%26cm_mmc%3D-_-Watson%2BCore_Watson%2BCore%2B-%2BPlatform-_-WW_WW-_-wdc-ref%26cm_mmca1%3D000000OF%26cm_mmca2%3D10000409">Start
+              for free in IBM Cloud</a>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% } %>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12" style="display:none">
+            <h2>Choose a Domain</h2>
+          </div>
+          <div class="col-lg-8 col-md-12 col-sm-12" style="display:none">
+            <p class="help-block">Just like a doctor is skilled in medical terms, domain-specific models have been
+              trained
+              in terminology from various fields. They help to provide higher quality translations when used in the
+              right
+              context.</p>
+            <div class="form-group" style="margin-bottom: 1em;">
+              <input type="radio" name="group1" value="conversational">Conversational
+              <input type="radio" name="group1" value="general" checked="checked">News
+              <input type="radio" name="group1" value="patent">Patent
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12" style="display:none">
+            <div>
+              <h6><strong>Would you like to help make this service better?</strong><br><br>
+                <div class="form-group opt-box-input">
+                  <input type="radio" name="serRadio" id="serRadio" value="0" style="margin-left: 0;" checked>Allow
+                  Watson
+                  to learn from this session<br><input type="radio" id="serRadio" name="serRadio" value="1"
+                    style="margin-left: 0;">Opt out
+                </div>
+                <div>This system is for demonstration purposes only and is not intended to process Personal Data. No
+                  Personal Data is to be entered into this system as it may not have the necessary controls in place to
+                  meet
+                  the requirements of the General Data Protection Regulation (EU) 2016/679</div>
+              </h6>
+              <div>
+                <h6>
+                  By using this application, you agree to the&nbsp;
+                  <a target="_blank" rel="noreferrer noopener"
+                    href="https://watson-developer-cloud.github.io/terms?name=Language%20Translator%20Demo">
+                    Terms of Use
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h1 style=text-align:center>Proyecto final de Topicos especiales - Grupo #12</h1>
+            <h3 style=text-align:center;>Introduza en la sección "Texto de entrada" el texto que desea traducir. A continuación, en el campo a la derecha, se mostrará el texto traducido, por último selecccione la voz que desea utilizar y dele click a sintetizar texto a voz</h3>
+          </div>
+          <div class="container">
+            <div class="row mb-3">
+              <div class="col-md-8 themed-grid-col">
+                <form id="formTextToSpeech">
+                  <div class="form-group">
+                    <label for="formLabelVoces">Seleccione el tipo de voz</label>
+                    <select style="border-radius: 50px; border-color:#2d6dc8" , class="form-control"
+                      id="formSelectVoces" name="voice"></select>
+                  </div>
+                  <input id="formHiddenAccept" name="accept" type="hidden" value="audio/mp3">
+                  <div class="form-group">
+                    <label style="display:none" for="formLabelTexto">Texto a Convertir</label>
+                    <fieldset>
+                      <div style="display:none" class="form-group row">
+                        <div class="col-lg-12">
+                          <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home2">
+                              <textarea class="form-control" id="formTextareaTexto" name="text" rows="3"></textarea>
+                            </div>
+                            <div style="display:none" role="tabpanel" class="tab-pane" id="profile2">
+                              <textarea disabled="disabled">Example of JSON</textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="form-group ">
+                    
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-4 themed-grid-col">
+                <div class="media">
+                  <audio controls id="playerTextVoz" type="audio/mpeg">
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h3>Texto de entrada</h3>
+            <div class="form-group row">
+              <div class="col-lg-12">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuInput"
+                    data-toggle="dropdown" aria-expanded="true">
+                    Choose Language
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="ulSourceLang">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="well">
+              <form class="form-horizontal">
+                <div role="tabpanel">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                        data-toggle="tab">Inserte el texto que se traducirá</a></li>
+                    <li style="display:none" role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                        data-toggle="tab">Rest
+                        API</a></li>
+                    <button style="margin: 0em; padding: 0em;" class="btn btn-secondary pull-right" type="button"
+                      id="sourceTargetLangSwitch">⇄</button>
+                  </ul>
+                  <div class="hr-tab"></div>
+                  <fieldset>
+                    <div class="form-group row">
+                      <div class="col-lg-12">
+                        <div class="tab-content">
+                          <div role="tabpanel" class="tab-pane active" id="home">
+                            <div id="character-limit-warning" style="pointer-events: none;
+                              display: none;
+                              justify-content: center;
+                              align-content: center;
+                              flex-direction: column;
+                              text-align: center;
+                              position: absolute;
+                              left: 1em;
+                              right: 1em;
+                              top: 0em;
+                              bottom: 0.25em;
+                              background-color: rgba(255,255,255,0.75)">
+                              You have reached the character limit (10k), sign up for more at
+                              <a style="pointer-events: auto;"
+                                href="https://www.ibm.com/insert-url-here">www.ibm.com/insert-url-here</a>
+                            </div>
+                            <textarea></textarea>
+                            <span style="position: absolute; right: 1.5em; bottom: 0.5em;" class="input-counter"></span>
+                          </div>
+                          <div style="display:none" role="tabpanel" class="tab-pane" id="profile">
+                            <textarea disabled="disabled">Example of Rest API</textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+              </form>
+            </div>
+          </div>
+          <div class="form-group row">
+          </div>
+          <div style="align-self: center;" class="col-sm-10">
+            <button
+              style="border-color:#2d6dc8; color: #2d6dc8; border-radius: 50px; background-color: #FFFFFF;"
+              type="submit" class="btn btn-primary">Sintetizar texto a Voz</button>
+          </div>
+          <div id="resetSpan">
+            <img style="color:#2d6dc8; align-items: center; font-weight: 1000; padding-bottom: 25px;" class="icon"><a href="/">Restablecer</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h3>Texto generado</h3>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuOutput"
+                    data-toggle="dropdown" aria-expanded="true">
+                    Choose language
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="ulTargetLang">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="well">
+              <form class="form-horizontal">
+                <div role="tabpanel">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home2" aria-controls="home" role="tab"
+                        data-toggle="tab">Resultado de traducción:</a></li>
+                    <li style="display:none" role="presentation"><a href="#profile2" aria-controls="profile" role="tab"
+                        data-toggle="tab">JSON</a></li>
+                  </ul>
+                  <div class="hr-tab"></div>
+                  <fieldset>
+                    <div class="form-group row">
+                      <div class="col-lg-12">
+                        <div class="tab-content">
+                          <div role="tabpanel" class="tab-pane active" id="home2">
+                            <textarea></textarea>
+                          </div>
+                          <div role="tabpanel" class="tab-pane" id="profile2">
+                            <textarea disabled="disabled">Example of JSON</textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <script src="js/css_browser_selector.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="demo.js"></script>
+      <script type="text/javascript"
+        src="https://cdn.rawgit.com/watson-developer-cloud/watson-developer-cloud.github.io/master/analytics.js" />
+      <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+      <!-- Scripts Areas -->
+      <script>
+        (function () {
+          $.getJSON("/api/voces")
+            .done(function (data) {
+              $.each(data.voices, function (i, voice) {
+                var optionHtml = voice.name == "es-ES_EnriqueV3Voice" ? "<option selected></option>" : "<option></option>";
+                $("#formSelectVoces").append($(optionHtml).val(voice.name).html(voice.description))
+              });
+            });
+          $("#formTextToSpeech").on("submit", function (e) {
+            e.preventDefault();
+            var formData = $(this).serialize();
+            var url = "/api/sintetizar?" + formData;
+            var player = $("#playerTextVoz");
+            player.attr("src", url);
+            player.trigger('load');
+          });
+
+        })();
+      </script>
+</body>
+
+</html>
